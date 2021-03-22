@@ -9,14 +9,15 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 
+NON_NEED_LOGIN = True
 
 def yandex_63a3d0a896e29e17(request):
     return render(request, 'yandex_63a3d0a896e29e17.html', {})
 
 def site_wellcome(request, art_tree_id = 1):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated or NON_NEED_LOGIN:
         # Do something for authenticated users.
-        full_name = request.user.get_full_name()
+        if not NON_NEED_LOGIN: full_name = request.user.get_full_name()
     else:
         # Do something for anonymous users. 
         return HttpResponseRedirect(reverse('logins', args=[]))      
@@ -25,9 +26,9 @@ def site_wellcome(request, art_tree_id = 1):
     return render(request, 'site_main.html', {'art_tree_id' : art_tree_id, 'art_parent' : art_parent.parent, 'type' : art_parent.type,})
 
 def wrapper(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated or NON_NEED_LOGIN:
         # Do something for authenticated users.
-        full_name = request.user.get_full_name()
+        if not NON_NEED_LOGIN: full_name = request.user.get_full_name()
     else:
         # Do something for anonymous users. 
         return HttpResponseRedirect(reverse('logins', args=[]))      
@@ -39,18 +40,18 @@ def wrapper(request):
 
 # Create your views here.
 def site_main(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated or NON_NEED_LOGIN:
         # Do something for authenticated users.
-        full_name = request.user.get_full_name()
+        if not NON_NEED_LOGIN: full_name = request.user.get_full_name()
     else:
         # Do something for anonymous users. 
         return HttpResponseRedirect(reverse('logins', args=[]))      
     return render(request, 'site_main.html', {})
 
 def site_main_new(request, id_arc_tree = 1):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated or NON_NEED_LOGIN:
         # Do something for authenticated users.
-        full_name = request.user.get_full_name()
+        if not NON_NEED_LOGIN: full_name = request.user.get_full_name()
     else:
         # Do something for anonymous users. 
         return HttpResponseRedirect(reverse('logins', args=[]))      
@@ -77,9 +78,9 @@ def site_main_new(request, id_arc_tree = 1):
                                                  'type' : Articles_tree_record.type,  })
 
 def site_tree_test(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated or NON_NEED_LOGIN:
         # Do something for authenticated users.
-        full_name = request.user.get_full_name()
+        if not NON_NEED_LOGIN: full_name = request.user.get_full_name()
     else:
         # Do something for anonymous users. 
         return HttpResponseRedirect(reverse('logins', args=[]))     
@@ -90,9 +91,9 @@ def site_tree_test(request):
     return render(request, 'site_tree_test.html', {'tree' : result, })
 
 def site_head(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated or NON_NEED_LOGIN:
         # Do something for authenticated users.
-        full_name = request.user.get_full_name()
+        if not NON_NEED_LOGIN: full_name = request.user.get_full_name()
     else:
         # Do something for anonymous users. 
         return HttpResponseRedirect(reverse('logins', args=[]))     
@@ -106,9 +107,9 @@ def site_head(request):
     return render(request, 'site_head.html', {'tree' : tree, 'id_arc_tree' : id_arc_tree})
 
 def site_navigator(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated or NON_NEED_LOGIN:
         # Do something for authenticated users.
-        full_name = request.user.get_full_name()
+        if not NON_NEED_LOGIN: full_name = request.user.get_full_name()
     else:
         # Do something for anonymous users. 
         return HttpResponseRedirect(reverse('logins', args=[]))     
@@ -123,9 +124,9 @@ def site_navigator(request):
     return render(request, 'site_navigator.html',  {'tree' : tree, 'id_arc_tree' : id_arc_tree})
 
 def site_article(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated or NON_NEED_LOGIN:
         # Do something for authenticated users.
-        full_name = request.user.get_full_name()
+        if not NON_NEED_LOGIN: full_name = request.user.get_full_name()
     else:
         # Do something for anonymous users. 
         return HttpResponseRedirect(reverse('logins', args=[]))     
