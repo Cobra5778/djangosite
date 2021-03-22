@@ -1,0 +1,67 @@
+<div class="modal fade modal-order-form" id="orderCallModal" tabindex="-1" role="dialog" aria-labelledby="orderCallFormLabel" aria-hidden="true" data-uri="/order/call.php">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="m-outer-form" id="orderCall">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+                    <div class="m-header">
+                                                    <h3 id="orderCallFormLabel">Заказать звонок</h3>
+                                                                            <p class="text">
+                                Пожалуйста, представьтесь и укажите номер Вашего телефона                            </p>
+                                            </div>
+
+                    <div class="m-content">
+                        
+                            
+                            <form method="post" action="/order/call.php" id="orderCallForm">
+                                <input type="hidden" name="sessid" id="sessid_4" value="6b18138c3bad939481b6ca42b3e988b3">                                <input type="hidden" name="add_new_order" value="1">
+                                <input type="hidden" name="type" value="call">
+                                
+                                <div class="form-group">
+                                    <label for="form-CALL-NAME">Ваше имя: <span class="require">*</span></label>
+                                    <input type="text" class="form-control" id="form-CALL-NAME" name="NAME" value="">
+                                                                    </div>
+
+                                <div class="form-group">
+                                    <label for="form-CALL-MOBILE">Номер телефона: <span class="require">*</span></label>
+                                    <span class="phone pull-right"></span>
+                                    <input type="text" class="form-control" id="form-CALL-MOBILE" name="MOBILE" value="">
+                                    <input type="hidden" name="MOBILE_COUNTRY" value="">
+                                                                    </div>
+
+                                <div class="form-group">
+                                    <label for="form-QUESTION-COMMENT">Комментарий: <span class="require">*</span></label>
+                                    <textarea name="COMMENT" class="form-control" id="form-QUESTION-COMMENT"></textarea>
+                                                                    </div>
+
+                                
+                                <div class="m-footer">
+                                    <div class="left">
+                                        <div class="required">
+                                            <span>*</span> обязательные поля                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="btn btn-primary btn-lg btn-submit" data-loading-text="Отправка...">
+                                            ЗАКАЗАТЬ                                        </button>
+                                    </div>
+                                </div>
+
+                            </form>
+                                            </div>
+
+                    <div class="circle-outer">
+                        <div class="circle-inner">
+                            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

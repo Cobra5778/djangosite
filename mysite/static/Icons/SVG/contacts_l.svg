@@ -1,0 +1,31 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="84.2px" height="88.3px" viewBox="0 0 84.2 88.3" >
+<title>contact icon</title>
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{fill:url(#SVGID_3_);}
+	.st3{fill:url(#SVGID_4_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="38.4587" y1="37.3333" x2="38.4587" y2="88.3333">
+	<stop  offset="0" style="stop-color:#4285F4"/>
+	<stop  offset="1" style="stop-color:#4470B3"/>
+</linearGradient>
+<path class="st0" d="M76.9,37.3c0.2,0.3-37.6,27.3-37.8,27l35.8,22.5L38.4,68.2L2.1,86.9l35.5-22.5l-37.5-27L0,88.2l76.7,0.2
+	L76.9,37.3z"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="22.1667" y1="9.0833" x2="22.1667" y2="38.3333">
+	<stop  offset="0" style="stop-color:#4285F4"/>
+	<stop  offset="1" style="stop-color:#4470B3"/>
+</linearGradient>
+<polygon class="st1" points="0.8,35.6 38.3,9.1 43.5,13.3 41.2,15.8 37.8,13.1 4.2,38.3 "/>
+<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="69.75" y1="29.5833" x2="69.75" y2="38">
+	<stop  offset="0" style="stop-color:#4285F4"/>
+	<stop  offset="1" style="stop-color:#4470B3"/>
+</linearGradient>
+<polygon class="st2" points="67.2,29.6 75.3,36 72.6,38 64.3,32.2 "/>
+<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="59.567" y1="0" x2="59.567" y2="51.17">
+	<stop  offset="0" style="stop-color:#4285F4"/>
+	<stop  offset="1" style="stop-color:#4470B3"/>
+</linearGradient>
+<path class="st3" d="M84.2,12.4c0-1.2-22.3-10.9-26.3-12.4c0.3,3.8,0.2,5.6,0.2,5.6s-11,3.2-18.5,15.1S35.3,50.9,38,51.2
+	S41.3,37.3,48.7,31s12.6-4.9,12.6-4.9s0.2,1.9,0.3,4.7C62.7,29.9,84.3,13.6,84.2,12.4z"/>
+</svg>

@@ -1,0 +1,44 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="67.6px" height="95.5px" viewBox="0 0 67.6 95.5" >
+<title>radio links icon</title>
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{fill:url(#SVGID_3_);}
+	.st3{fill:url(#SVGID_4_);}
+	.st4{fill:url(#SVGID_5_);}
+	.st5{fill:url(#SVGID_6_);}
+</style>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="33.8025" y1="0" x2="33.8025" y2="68.2924">
+		<stop  offset="0" style="stop-color:#4285F4"/>
+		<stop  offset="1" style="stop-color:#4470B3"/>
+	</linearGradient>
+	<path class="st0" d="M16,0l-7,7.9c-12.7,14.4-11.9,36,1.5,49.4c0.9-4.4,4.8-7.8,9.5-7.8c5.4,0,9.7,4.3,9.7,9.7
+		c0,3.1-1.4,5.8-3.7,7.6c13.1,4,27.9,0.3,37.6-10.6l4-4.5L16,0z"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="19.8798" y1="51.3232" x2="19.8798" y2="67.6982">
+		<stop  offset="0" style="stop-color:#4285F4"/>
+		<stop  offset="1" style="stop-color:#4470B3"/>
+	</linearGradient>
+	<path class="st1" d="M19.9,51.3c-4.5,0-8.2,3.7-8.2,8.2c0,4.5,3.7,8.2,8.2,8.2c4.5,0,8.2-3.7,8.2-8.2C28.1,55,24.4,51.3,19.9,51.3z
+		 M20.1,65.8c-3.6,0-6.4-2.9-6.4-6.4c0-3.6,2.9-6.4,6.4-6.4c3.6,0,6.4,2.9,6.4,6.4C26.6,62.9,23.7,65.8,20.1,65.8z"/>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="20.1298" y1="55.0732" x2="20.1298" y2="63.9482">
+		<stop  offset="0" style="stop-color:#4285F4"/>
+		<stop  offset="1" style="stop-color:#4470B3"/>
+	</linearGradient>
+	<circle class="st2" cx="20.1" cy="59.5" r="4.4"/>
+	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="20.0741" y1="64.6982" x2="20.0741" y2="95.4958">
+		<stop  offset="0" style="stop-color:#4285F4"/>
+		<stop  offset="1" style="stop-color:#4470B3"/>
+	</linearGradient>
+	<path class="st3" d="M11.7,64.7c0,0,4.2,4.6,7.9,4.6s5.5-1.5,6.1-1.9c1.8,0.8,2.9,0.6,3.2,1.1c0.3,0.5,7.9,23.7,7.1,25.8
+		c-0.7,2.1-31,1-32-0.3C3.2,92.7,11.7,64.7,11.7,64.7z"/>
+	<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="46.2366" y1="15.1096" x2="46.2366" y2="26.5732">
+		<stop  offset="0" style="stop-color:#4285F4"/>
+		<stop  offset="1" style="stop-color:#4470B3"/>
+	</linearGradient>
+	<polygon class="st4" points="52,19.3 44.7,26.6 40.5,22.4 47.8,15.1 	"/>
+	<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="54.5673" y1="8.1982" x2="54.5673" y2="18.1982">
+		<stop  offset="0" style="stop-color:#4285F4"/>
+		<stop  offset="1" style="stop-color:#4470B3"/>
+	</linearGradient>
+	<circle class="st5" cx="54.6" cy="13.2" r="5"/>
+</svg>

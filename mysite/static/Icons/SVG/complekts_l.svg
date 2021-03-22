@@ -1,0 +1,15 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="73.2px" height="73.5px" viewBox="0 0 73.2 73.5" >
+<title>CPE icon</title>
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="59.3747" y1="0" x2="59.3747" y2="118.7495">
+	<stop  offset="0" style="stop-color:#4285F4"/>
+	<stop  offset="1" style="stop-color:#4470B3"/>
+</linearGradient>
+	<path class="st0" d="M73.2,61.8C73.2,28.1,45.3,0.2,11.7,0c-9.3,0.3-9.5,14.1,0,14.5c26.2,0.8,46.2,21.6,46.2,47.3
+		c0,0-0.3-10.7,0,0C58.2,72.5,73.2,73.5,73.2,61.8z"/>
+	<path class="st0" d="M11.5,24.2c-11.2,0.1-11,15,0,15.2C24,40,32.8,49.8,32.8,61.8c0,0.1-0.2-8.5,0,0.2c0.2,8.7,15.3,10,15.7,0
+		C48.3,42,32,24.7,11.5,24.2z"/>
+	<ellipse class="st0" cx="11.3" cy="62" rx="11.3" ry="11.5"/>
+</svg>

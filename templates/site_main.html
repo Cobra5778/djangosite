@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html lang="ru">
+    <head>
+        <link rel="shortcut icon" href="{% static 'Icons/SVG/favicon.svg' %}" type="image/svg+xml">
+        <link rel="icon" type="image/png" href="{% static 'Icons/1x/logo10.png' %}">
+        <link rel="mask-icon" href="{% static 'Icons/SVG/icon.svg' %}" color="#4285F4">
+        <link rel="icon" type="image/svg+xml" href="{% static 'Icons/SVG/favicon.svg' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> <!--  Здесь похоже только значки - можно будет убрать -->
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="{% static 'bootstrap-4.3.1/css/bootstrap.min.css' %}">
+        <!-- Material Design Bootstrap -->
+        <link rel="stylesheet" href="{% static 'MDB-Free_4.8.5/css/mdb.min.css' %}">
+        <!-- Your custom styles (optional) -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <meta name="yandex-verification" content="ac493dcd5af1d1e6" />
+        <title>{{ head_line }}</title>
+        <!-- fancyBox3 CSS -->
+        <link href="{% static 'fancybox_3.5.7/jquery.fancybox.min.css' %}" rel="stylesheet">
+        <style>
+            .thumb img {
+                #-webkit-filter: grayscale(0);
+                filter: none;
+                border-radius: 5px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                #padding: 5px;
+            }
+            .thumb img:hover {
+                #-webkit-filter: grayscale(1);
+                #filter: grayscale(1);
+            }
+            .thumb {
+                padding: 5px;
+            }
+        </style>
+    </head>
+   <body>
+      <div class="window">
+<!-- site_head -->
+	      <header class="header" id="site_head">
+<div class="header__top">
+     <div class="container">
+        <div class="row">
+           <div class="col-md-6">
+               <a class="logo-header" href="/"><img title="лого2 на главной.png" role="img" src="{% static '/Icons/SVG/logo1.svg' %}"  width="350" alt="лого на главной" width="250" height="90"><br></a>
+           </div>
+           <div class="col-md-4">
+            <i class="fas fa-envelope text-primary"></i> <a href="mailto:mail@kurssoft.ru">mail@kurssoft.ru</a><br>
+            <i class="fas fa-phone text-primary"></i> <a href="tel:+79103280128">+7 (910) 328 0128</a>
+                <br><i class="fas fa-share-alt text-primary"></i> Поделиться<div class="ya-share2" data-services="vkontakte,facebook,twitter,viber,whatsapp,telegram" hint="Поделиться" data-image="{% static 'Icons/FLogoRn.svg' %}"></div>
+           </div>
+           <div class="col-md-2">
+              <div class="text-header days">
+                  <span><i>10 лет успешного построения сетей Wireless Internet Service Provider.</i></span>
+              </div>
+           </div>
+        </div>
+     </div>
+</div>
+<div class="header__bottom shadow">
+   <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark  shadow-none">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         	<span class="navbar-toggler-icon"></span>
+         </button>
+			{% if head_tree %}<div class="collapse navbar-collapse" id="navbarSupportedContent">{% regroup head_tree by title as title_list %}
+				<ul class="navbar-nav">
+				{% for title in title_list %}
+			    	<li class="nav-item{% if title.list.0.id1 %} dropdown{% endif %}{% if pointer.0.id == title.list.0.id %} activ{% endif %}">
+			    		<a class="nav-link{% if title.list.0.id1 %} dropdown-toggle{% endif %}" href="{% url 'site_main' title.list.0.id %}"{% if title.list.0.id1 %} role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span{% endif %}>{{ title.grouper }}{% if title.list.0.id1 %}</span>{% endif %}</a>
+			    		{% if title.list.0.id1 %}<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					        {% for item in title.list %}{% if item.url1 %}<a class="dropdown-item" href="{% url 'site_main' item.id %}#{{ item.url1 }}">{% else %}<a class="dropdown-item{% if pointer.1.id == item.id1 %} activ{% endif %}" href="{% url 'site_main' item.id1 %}">{% endif %}{{ item.title1 }}</a>{% endfor %}
+					    </div>{% endif %}
+				    </li>{% endfor %}
+				</ul>
+			</div>{% endif %}
+      </nav>
+   </div>
+</div>
+	      </header>
+<!-- site_wrapper -->
+            <div class="heading" id="heading">
+                <div class="container wrapper-container">
+                   <div class="row">
+                      <div class="col-xs-12 h6">
+                         <h1>{% if head_line %}{{ head_line }}{% endif %}</h1>
+                         <ol id="breadcrumb">
+                            <li><a href="{% url 'site_main' 1 %}"><i class="fas fa-home"></i></a></li>
+                            {% if pointer %}{% for point in pointer %}<li{% if forloop.counter == pointer|length %} class="current"{% endif %}><a href="{% url 'site_main' point.id %}">{{ point.title }}</a></li>{% endfor %}{% endif %}
+                         </ol>
+                      </div>
+                   </div>
+                </div>
+            </div>
+<!-- site_content -->
+            <div class="content" id="content">
+                <div class="container wrapper-container">
+                    <div class="row">
+                        {% if type == 1 %}<div class="col-content col-content-left col-md-12 col-sm-12 col-xs-12" id="site_article">{{ art_content|safe }}</div>
+                        {% else %}<div class="col-sidebar col-sidebar-left col-md-3 hidden-sm hidden-xs" id="site_navigator">
+                                <!-- site_navigator -->
+                                {% if tree %}{% regroup tree by title as title_list %}<ul class="sidebar-navigation">
+                                {% for title in title_list %}{% if pointer.1.id == title.list.0.id %}<li class="root-item-selected">{% else %}<li class="root-item">{% endif %}<a href="{% url 'site_main' title.list.0.id %}"><i class="fa"></i>{{ title.grouper }}</a>
+                                    {% if title.list.0.id1 %}<ul class="item-submenu">
+                                            {% for item in title.list %}<li{% if pointer.2.id == item.id1 %} class="item-selected"{% endif %}>{% if item.url1 %}<a href="#{{ item.url1 }}">{% else %}<a href="{% url 'site_main' item.id1 %}">{% endif %}<i class="fa"></i>{{ item.title1 }}</a></li>{% endfor %}
+                                        </ul>{% endif %}
+                                    </li>{% endfor %}
+                                </ul>{% endif %}
+                            </div>
+                        <div class="col-content col-content-left col-md-9 col-sm-12 col-xs-12" id="site_article">{{ art_content|safe }}</div>{% endif %}
+                    </div>
+                </div>
+            </div>
+<!-- site_footer -->
+<footer class="page-footer font-small grey lighten-5 black-text pt-4">
+   <div class="container">
+	   <div class="container-fluid text-center lighten-3 text-md-left">
+	      <div class="row">
+	         <div class="col-md-2 mb-md-0 mb-3">
+	            <h5 class="text-uppercase">Ссылки</h5>
+	            <ul class="list-unstyled">
+	               <li><a href="{% url 'site_main' 1 %}">О нашей разработке</a></li>
+	               <li><a href="{% url 'site_main' 2 %}">Наши услуги</a></li>
+	               <li><a href="{% url 'site_main' 6 %}">Контакты</a></li>
+	            </ul>
+	         </div>
+	         <hr class="clearfix w-100 d-md-none pb-2">
+	         <div class="col-md-6 mb-md-0 mb-6">
+	            <!-- Links -->
+	            <h5 class="text-uppercase">Контакты</h5>
+	            <p>Корбун Иван Иванович</p>
+	            <p><a href="mailto:mail@prom-teo.ru">mail@kurssoft.ru</a></p>
+	            <p>309511, Белгородская область, г. Старый Оскол, мкр. Олимпийский 62<br></p>
+	            <p class="p-phone"><a href="tel:+79103280128">+7 910 328 0128</a></p>
+	         </div>
+	         <div class="col-md-4 mt-md-0 mt-4">
+	            <!-- Content -->
+	            <h5 class="text-uppercase">О компании</h5>
+	            <p>Мы с 2011г. строим радио сети на базе оборудования Mikrotik</p>
+	         </div>
+	      </div>
+	   </div>
+   </div>
+   <div class="footer-copyright text-center py-3 black-text">© 2020 Copyright
+      <a href="{% url 'site_main' %}">ПО Контроль и управление радио сетью</a>
+   </div>
+</footer>
+
+      </div>
+      <a href="#" id="back_to_top" style="display: none;"><span class="fa fa-chevron-up"></span></a>
+      <script src="https://yastatic.net/share2/share.js" async></script>
+      <script src="{% static 'MDB-Free_4.8.5/js/jquery-3.4.1.min.js' %}"></script>
+      <script src="{% static 'MDB-Free_4.8.5/js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'MDB-Free_4.8.5/js/mdb.min.js' %}"></script>
+      <script src="{% static 'MDB-Free_4.8.5/js/popper.min.js' %}"></script>
+      <!-- fancyBox -->
+      <script src="{% static 'fancybox_3.5.7/jquery.fancybox.min.js' %}"></script>
+        <script type="text/javascript">
+            $(function() {
+                // Когда страница загрузилась
+                $(document).ready(function() {
+                      now = new Date();
+                      document.getElementById("site_head").querySelector(".days").innerHTML = "<i>" + (now.getFullYear()-2011) + " лет успешного построения сетей Wireless Internet Service Provider.</i>";
+                });
+            });
+        </script>
+   </body>
+</html>
+

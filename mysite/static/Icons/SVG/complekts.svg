@@ -1,0 +1,20 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="120px" height="120px" viewBox="0 0 118.7 118.7">
+<title>CPE icon</title>
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#FFFFFF;}
+</style>
+<defs>
+</defs>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="59.3747" y1="0" x2="59.3747" y2="118.7495">
+	<stop  offset="0" style="stop-color:#4285F4"/>
+	<stop  offset="1" style="stop-color:#4470B3"/>
+</linearGradient>
+<path class="st0" d="M106.7,118.7H12c-6.6,0-12-5.4-12-12V12C0,5.4,5.4,0,12,0h94.7c6.6,0,12,5.4,12,12v94.7
+	C118.7,113.3,113.3,118.7,106.7,118.7z"/>
+	<path class="st1" d="M96.9,81.3c0-33.7-27.8-61.6-61.5-61.8c-9.3,0.3-9.5,14.1,0,14.5c26.2,0.8,46.2,21.6,46.2,47.3
+		c0,0-0.3-10.7,0,0C81.9,92,96.9,93,96.9,81.3z"/>
+	<path class="st1" d="M35.2,43.7c-11.2,0.1-11,15,0,15.2c12.5,0.6,21.3,10.4,21.3,22.4c0,0.1-0.2-8.5,0,0.2c0.2,8.7,15.3,10,15.7,0
+		C72.1,61.5,55.7,44.2,35.2,43.7z"/>
+	<ellipse class="st1" cx="35.1" cy="81.5" rx="11.3" ry="11.5"/>
+</svg>

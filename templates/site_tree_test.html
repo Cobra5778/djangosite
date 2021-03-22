@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html lang="ru">
+   <head>
+      <meta charset="utf-8">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="{% static 'bootstrap-4.3.1/css/bootstrap.min.css' %}">
+      <!-- Material Design Bootstrap -->
+      <link rel="stylesheet" href="{% static 'MDB-Free_4.8.5/css/mdb.min.css' %}">
+      <!-- Your custom styles (optional) -->
+      <link href="{% static 'MDB-Free_4.8.5/css/style.css' %}" rel="stylesheet">
+      <link rel="stylesheet" href="{% static 'MDB-Free_4.8.5/css/style.css' %}">
+      
+      <link rel="stylesheet" href="{% static 'pto/css/style.css' %}">
+
+      <title>История нашей компании</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   </head>
+   <body>
+      <div class="window">
+         <div id="wrapper" class="wide light use-zebra">
+{% include 'site_head.html' %}
+            <div class="heading">
+               <div class="container wrapper-container">
+                  <div class="row">
+                     <div class="col-xs-12 h6">
+                        <h1>История компании</h1>
+						<ol id="breadcrumb">
+						  <li>
+						    <a href="#"><i class="fas fa-home"></i>
+						    <span class="sr-only">Главная</span></a>
+						  </li>
+						  <li>
+						    <a href="#">О компании</a>
+						  </li>
+						  <li class="current">
+						    <a href="#">История компании</a>
+						  </li>
+						</ol> 
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="content">
+               <div class="container wrapper-container">
+                  <div class="row">
+                     <div class="col-sidebar col-sidebar-left col-md-3 hidden-sm hidden-xs">
+{% include 'site_navigator.html' %}
+                     </div>
+                     <div class="col-content col-content-left col-md-9 col-sm-12 col-xs-12" >
+
+{{ tree|safe  }}
+
+                     </div>
+                     <!-- .col-md-9 -->
+                  </div>
+                  <!-- .row -->
+               </div>
+               <!-- .container wrapper-container -->
+            </div>
+            <!-- .content -->
+         </div>
+         <footer class="footer">
+            {% include 'site_footer.html' %}
+         </footer>
+      </div>
+      <a href="#" id="back_to_top" style="display: none;"><span class="fa fa-chevron-up"></span></a>
+{% include 'site_modaldialog.html' %}
+{% include 'site_modalorder.html' %}
+{% include 'site_modalkonsult.html' %}
+{% include 'site_modalquestion.html' %}
+{% include 'site_modalcall.html' %}
+      <script src="{% static 'MDB-Free_4.8.5/js/jquery-3.4.1.min.js' %}"></script>
+      <script src="{% static 'MDB-Free_4.8.5/js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'MDB-Free_4.8.5/js/mdb.min.js' %}"></script>
+      <script src="{% static 'MDB-Free_4.8.5/js/popper.min.js' %}"></script>
+
+   </body>
+</html>
+

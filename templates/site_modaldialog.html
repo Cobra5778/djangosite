@@ -1,0 +1,77 @@
+<div class="modal fade modal-order-form" id="orderProductModal" tabindex="-1" role="dialog" aria-labelledby="orderProductFormLabel" aria-hidden="true" data-uri="/order/product.php">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="m-outer-form" id="orderProduct">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+                    <div class="m-header">
+                                                    <h3 id="orderProductFormLabel">Заказать товар</h3>
+                                                                            <p class="text">
+                                Менеджеры свяжутся с Вами после отправки заявки                            </p>
+                                            </div>
+
+                    <div class="m-content">
+                        
+                            
+                            <form method="post" action="/order/product.php" id="orderProductForm">
+                                <input type="hidden" name="sessid" id="sessid" value="6b18138c3bad939481b6ca42b3e988b3">                                <input type="hidden" name="add_new_order" value="1">
+                                <input type="hidden" name="type" value="product">
+                                
+                                <div class="form-group">
+                                    <label for="form-PRODUCT-NAME">Ваше имя: <span class="require">*</span></label>
+                                    <input type="text" class="form-control" id="form-PRODUCT-NAME" name="NAME" value="">
+                                                                    </div>
+
+                                <div class="form-group">
+                                    <label for="form-PRODUCT-MOBILE">Номер телефона: <span class="require">*</span></label>
+                                    <span class="phone pull-right"></span>
+                                    <input type="text" class="form-control" id="form-PRODUCT-MOBILE" name="MOBILE" value="">
+                                    <input type="hidden" name="MOBILE_COUNTRY" value="">
+                                                                    </div>
+
+                                <div class="form-group">
+                                    <label for="form-PRODUCT-EMAIL">Email адрес:</label>
+                                    <input type="text" class="form-control" id="form-PRODUCT-EMAIL" name="EMAIL" value="">
+                                                                    </div>
+
+                                <div class="form-group">
+                                    <label for="form-PRODUCT-PRODUCT">Продукт:</label>
+                                    <input type="text" class="form-control" id="form-PRODUCT-PRODUCT" name="PRODUCT" value="">
+                                                                    </div>
+
+                                <div class="form-group">
+                                    <label for="form-PRODUCT-COMMENT">Комментарий:</label>
+                                    <textarea name="COMMENT" class="form-control" id="form-PRODUCT-COMMENT"></textarea>
+                                                                    </div>
+
+                                
+                                <div class="m-footer">
+                                    <div class="left">
+                                        <div class="required">
+                                            <span>*</span> обязательные поля                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="btn btn-primary btn-lg btn-submit" data-loading-text="Отправка...">
+                                            ЗАКАЗАТЬ                                        </button>
+                                    </div>
+                                </div>
+
+                            </form>
+                                            </div>
+
+                    <div class="circle-outer">
+                        <div class="circle-inner">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="120px" height="120px" viewBox="0 0 118.7 118.7">
+<title>contact icon</title>
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#FFFFFF;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="59.3747" y1="0" x2="59.3747" y2="118.7495">
+	<stop  offset="0" style="stop-color:#4285F4"/>
+	<stop  offset="1" style="stop-color:#4470B3"/>
+</linearGradient>
+<path class="st0" d="M106.7,118.7H12c-6.6,0-12-5.4-12-12V12C0,5.4,5.4,0,12,0h94.7c6.6,0,12,5.4,12,12v94.7
+	C118.7,113.3,113.3,118.7,106.7,118.7z"/>
+<path class="st1" d="M94.5,51.9c0.2,0.3-37.6,27.3-37.8,27l35.8,22.5L56,82.7l-36.3,18.8L55.1,79L17.6,52l-0.1,50.7l76.7,0.2
+	L94.5,51.9z"/>
+<polygon class="st1" points="18.4,50.2 55.9,23.7 61.1,27.9 58.7,30.3 55.4,27.7 21.7,52.9 "/>
+<polygon class="st1" points="84.7,44.2 92.8,50.6 90.1,52.6 81.8,46.7 "/>
+<path class="st1" d="M101.8,27c0-1.2-22.3-10.9-26.3-12.4c0.3,3.8,0.2,5.6,0.2,5.6s-11,3.2-18.5,15.1s-4.3,30.2-1.6,30.5
+	s3.3-13.8,10.7-20.2c7.4-6.3,12.6-4.9,12.6-4.9s0.2,1.9,0.3,4.7C80.2,44.5,101.8,28.2,101.8,27z"/>
+</svg>

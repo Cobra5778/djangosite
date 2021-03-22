@@ -1,0 +1,79 @@
+<div class="modal fade modal-order-form" id="orderQuestionModal" tabindex="-1" role="dialog" aria-labelledby="orderQuestionFormLabel" aria-hidden="true" data-uri="/order/question.php">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="m-outer-form" id="orderQuestion">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+                    <div class="m-header">
+                                                    <h3 id="orderQuestionFormLabel">Задать вопрос</h3>
+                                                                            <p class="text">
+                                Мы свяжемся с Вами после отправки заявки                            </p>
+                                            </div>
+
+                    <div class="m-content">
+                        
+                            
+                            <form method="post" action="/order/question.php" id="orderQuestionForm">
+                                <input type="hidden" name="sessid" id="sessid_3" value="6b18138c3bad939481b6ca42b3e988b3">                                <input type="hidden" name="add_new_order" value="1">
+                                <input type="hidden" name="type" value="question">
+                                <input type="hidden" name="EMAIL_TO" value="">
+                                <input type="hidden" name="SOTRUDNIK" value="">
+                                
+                                <div class="form-group">
+                                    <label for="form-QUESTION-NAME">Ваше имя: <span class="require">*</span></label>
+                                    <input type="text" class="form-control" id="form-QUESTION-NAME" name="NAME" value="">
+                                                                    </div>
+
+                                <div class="form-group">
+                                    <label for="form-QUESTION-MOBILE">Номер телефона: <span class="require">*</span></label>
+                                    <span class="phone pull-right"></span>
+                                    <input type="text" class="form-control" id="form-QUESTION-MOBILE" name="MOBILE" value="">
+                                    <input type="hidden" name="MOBILE_COUNTRY" value="">
+                                                                    </div>
+
+                                <div class="form-group">
+                                    <label for="form-QUESTION-EMAIL">Email адрес:</label>
+                                    <input type="text" class="form-control" id="form-QUESTION-EMAIL" name="EMAIL" value="">
+                                                                    </div>
+
+                                <div class="form-group">
+                                    <label for="form-QUESTION-PRODUCT">Интересующий товар / услуга:</label>
+                                    <input type="text" class="form-control" id="form-QUESTION-PRODUCT" name="PRODUCT" value="">
+                                                                    </div>
+
+                                <div class="form-group">
+                                    <label for="form-QUESTION-COMMENT">Вопрос: <span class="require">*</span></label>
+                                    <textarea name="COMMENT" class="form-control" id="form-QUESTION-COMMENT"></textarea>
+                                                                    </div>
+
+                                
+                                <div class="m-footer">
+                                    <div class="left">
+                                        <div class="required">
+                                            <span>*</span> обязательные поля                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="btn btn-primary btn-lg btn-submit" data-loading-text="Отправка...">
+                                            ЗАДАТЬ                                        </button>
+                                    </div>
+                                </div>
+
+                            </form>
+                                            </div>
+
+                    <div class="circle-outer">
+                        <div class="circle-inner">
+                            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
