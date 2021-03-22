@@ -1,28 +1,48 @@
 <!DOCTYPE HTML>
 {% load static %}
 <head>
-		<link rel="shortcut icon" href="{% static 'Icons/SVG/favicon.svg' %}" type="image/svg+xml">
-		<link rel="icon" type="image/png" href="{% static 'Icons/1x/logo10.png' %}">
-		<link rel="mask-icon" href="{% static 'Icons/SVG/icon.svg' %}" color="#4285F4">
-		<link rel="icon" type="image/svg+xml" href="{% static 'Icons/SVG/favicon.svg' %}">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-		<!-- Bootstrap core CSS -->
-		<link rel="stylesheet" href="{% static 'MDB-Free_4.8.5/css/bootstrap.min.css' %}">
-		<!-- Material Design Bootstrap -->
-		<link rel="stylesheet" href="{% static 'MDB-Free_4.8.5/css/mdb.min.css' %}">
-		<!-- Your custom styles (optional) -->
-		<link href="{% static 'MDB-Free_4.8.5/css/style.css' %}" rel="stylesheet">
-		<link rel="stylesheet" href="/static/MDB-Free_4.8.5/css/addons/datatables.min.css">
-		<link rel="stylesheet" href="{% static 'bases/login.css' %}">
+        <link rel="shortcut icon" href="{% static 'Icons/SVG/favicon.svg' %}" type="image/svg+xml">
+        <link rel="icon" type="image/png" href="{% static 'Icons/1x/logo10.png' %}">
+        <link rel="mask-icon" href="{% static 'Icons/SVG/icon.svg' %}" color="#4285F4">
+        <link rel="icon" type="image/svg+xml" href="{% static 'Icons/SVG/favicon.svg' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="{% static 'bootstrap-4.3.1/css/bootstrap.min.css' %}">
+        <!-- Material Design Bootstrap -->
+        <link rel="stylesheet" href="{% static 'MDB-Free_4.8.5/css/mdb.min.css' %}">
+        <!-- Your custom styles (optional) -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <meta name="yandex-verification" content="ac493dcd5af1d1e6" />
+        <title>{{ head_line }}</title>
+        <!-- fancyBox3 CSS -->
+        <link href="{% static 'fancybox_3.5.7/jquery.fancybox.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/login.css' %}" rel="stylesheet">
+        <style>
+            .thumb img {
+                #-webkit-filter: grayscale(0);
+                filter: none;
+                border-radius: 5px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                #padding: 5px;
+            }
+            .thumb img:hover {
+                #-webkit-filter: grayscale(1);
+                #filter: grayscale(1);
+            }
+            .thumb {
+                padding: 5px;
+            }
+        </style>
   <title>Авторизация</title>
 </head>
 <body>
 {% if error_message %}<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Error!: </strong>{{ error_message }}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>{% endif %}		{% block content %}{% endblock %}
-<form action="{% url 'logins' %}" method="post">
+<form action="{% url 'logins' %}" method="post">{% csrf_token %}
 	<div class="wrapper fadeInDown">
 		<div id="formContent">
 			<div class="fadeIn first">
