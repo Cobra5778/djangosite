@@ -15,20 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include, url
-from django.contrib.auth import login, logout
 from mysite import views
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    url(r'^', include('mysite.urls')),
-    url(r'^login/', views.logins, name='logins'),
-    url(r'^logout/', views.logouts, name='logouts'),
-    # ex: /accounts/login/
-    url(r'^accounts/login/$', login),
-    # ex: /accounts/logout/
-    url(r'^accounts/logout/$', logout),
-
+    path('login/', views.logins, name='logins'),
+    path('logout/', views.logouts, name='logouts'),
+    path('yandex_ac493dcd5af1d1e6.html/', views.yandex_63a3d0a896e29e17, name='yandex_63a3d0a896e29e17'),
+    #path('<int:id_arc_tree>/', views.site_main_new, name='site_main'),
+    path('<int:id_arc_tree>-<str:article_name>/', views.site_main_new, name='site_main'),
+    path('<str:article_name>/', views.site_main_new, name='site_main'),
+    path('', views.site_main_new, name='site_main'),
 ]
-
-

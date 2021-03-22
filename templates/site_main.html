@@ -72,9 +72,9 @@
 				<ul class="navbar-nav">
 				{% for title in title_list %}
 			    	<li class="nav-item{% if title.list.0.id1 %} dropdown{% endif %}{% if pointer.0.id == title.list.0.id %} activ{% endif %}">
-			    		<a class="nav-link{% if title.list.0.id1 %} dropdown-toggle{% endif %}" href="{% url 'site_main' title.list.0.id %}"{% if title.list.0.id1 %} role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span{% endif %}>{{ title.grouper }}{% if title.list.0.id1 %}</span>{% endif %}</a>
+			    		<a class="nav-link{% if title.list.0.id1 %} dropdown-toggle{% endif %}" href="{% url 'site_main' title.list.0.id title.list.0.title_trans %}"{% if title.list.0.id1 %} role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span{% endif %}>{{ title.grouper }}{% if title.list.0.id1 %}</span>{% endif %}</a>
 			    		{% if title.list.0.id1 %}<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					        {% for item in title.list %}{% if item.url1 %}<a class="dropdown-item" href="{% url 'site_main' item.id %}#{{ item.url1 }}">{% else %}<a class="dropdown-item{% if pointer.1.id == item.id1 %} activ{% endif %}" href="{% url 'site_main' item.id1 %}">{% endif %}{{ item.title1 }}</a>{% endfor %}
+					        {% for item in title.list %}{% if item.url1 %}<a class="dropdown-item" href="{% url 'site_main' item.id item.title_trans %}#{{ item.url1 }}">{% else %}<a class="dropdown-item{% if pointer.1.id == item.id1 %} activ{% endif %}" href="{% url 'site_main' item.id1 item.title_trans %}">{% endif %}{{ item.title1 }}</a>{% endfor %}
 					    </div>{% endif %}
 				    </li>{% endfor %}
 				</ul>
@@ -90,8 +90,8 @@
                       <div class="col-xs-12 h6">
                          <h1>{% if head_line %}{{ head_line }}{% endif %}</h1>
                          <ol id="breadcrumb">
-                            <li><a href="{% url 'site_main' 1 %}"><i class="fas fa-home"></i></a></li>
-                            {% if pointer %}{% for point in pointer %}<li{% if forloop.counter == pointer|length %} class="current"{% endif %}><a href="{% url 'site_main' point.id %}">{{ point.title }}</a></li>{% endfor %}{% endif %}
+                            <li><a href="{% url 'site_main' head_tree.0.id head_tree.0.title_trans %}"><i class="fas fa-home"></i></a></li>
+                            {% if pointer %}{% for point in pointer %}<li{% if forloop.counter == pointer|length %} class="current"{% endif %}><a href="{% url 'site_main' point.id point.title_trans %}">{{ point.title }}</a></li>{% endfor %}{% endif %}
                          </ol>
                       </div>
                    </div>
@@ -105,9 +105,9 @@
                         {% else %}<div class="col-sidebar col-sidebar-left col-md-3 hidden-sm hidden-xs" id="site_navigator">
                                 <!-- site_navigator -->
                                 {% if tree %}{% regroup tree by title as title_list %}<ul class="sidebar-navigation">
-                                {% for title in title_list %}{% if pointer.1.id == title.list.0.id %}<li class="root-item-selected">{% else %}<li class="root-item">{% endif %}<a href="{% url 'site_main' title.list.0.id %}"><i class="fa"></i>{{ title.grouper }}</a>
+                                {% for title in title_list %}{% if pointer.1.id == title.list.0.id %}<li class="root-item-selected">{% else %}<li class="root-item">{% endif %}<a href="{% url 'site_main' title.list.0.id title.list.0.title_trans %}"><i class="fa"></i>{{ title.grouper }}</a>
                                     {% if title.list.0.id1 %}<ul class="item-submenu">
-                                            {% for item in title.list %}<li{% if pointer.2.id == item.id1 %} class="item-selected"{% endif %}>{% if item.url1 %}<a href="#{{ item.url1 }}">{% else %}<a href="{% url 'site_main' item.id1 %}">{% endif %}<i class="fa"></i>{{ item.title1 }}</a></li>{% endfor %}
+                                            {% for item in title.list %}<li{% if pointer.2.id == item.id1 %} class="item-selected"{% endif %}>{% if item.url1 %}<a href="#{{ item.url1 }}">{% else %}<a href="{% url 'site_main' item.id1 item.title_trans %}">{% endif %}<i class="fa"></i>{{ item.title1 }}</a></li>{% endfor %}
                                         </ul>{% endif %}
                                     </li>{% endfor %}
                                 </ul>{% endif %}
@@ -124,9 +124,9 @@
 	         <div class="col-md-2 mb-md-0 mb-3">
 	            <h5 class="text-uppercase">Ссылки</h5>
 	            <ul class="list-unstyled">
-	               <li><a href="{% url 'site_main' 1 %}">О нашей разработке</a></li>
-	               <li><a href="{% url 'site_main' 2 %}">Наши услуги</a></li>
-	               <li><a href="{% url 'site_main' 6 %}">Контакты</a></li>
+	               <li><a href="{% url 'site_main' head_tree.0.id head_tree.0.title_trans %}">О нашей разработке</a></li>
+	               <li><a href="{% url 'site_main' head_tree.1.id head_tree.1.title_trans %}">Наши услуги</a></li>
+	               <li><a href="{% url 'site_main' head_tree.15.id head_tree.15.title_trans %}">Контакты</a></li>
 	            </ul>
 	         </div>
 	         <hr class="clearfix w-100 d-md-none pb-2">

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
-from .procedures import pointer
+from .procedures import pointer, transliterate
 from .models import Articles_tree, Articles
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.http import HttpResponseRedirect, HttpResponse
@@ -48,7 +48,7 @@ def site_main(request):
         return HttpResponseRedirect(reverse('logins', args=[]))      
     return render(request, 'site_main.html', {})
 
-def site_main_new(request, id_arc_tree = 1):
+def site_main_new(request, id_arc_tree = 1, article_name = ''):
     if request.user.is_authenticated or NON_NEED_LOGIN:
         # Do something for authenticated users.
         if not NON_NEED_LOGIN: full_name = request.user.get_full_name()
@@ -65,9 +65,18 @@ def site_main_new(request, id_arc_tree = 1):
     #head_line = Article.title
     my_pointer = pointer(id_arc_tree, [])
     id_art_parent = Articles_tree_record.parent
-    head_tree =  Articles_tree.objects.raw(SQL.format(0))[:60]    
-    tree       = Articles_tree.objects.raw(SQL.format(my_pointer[0]['id']))[:60]
-    #print "!!!!!!! {}".format(my_pointer[0]['id'] )
+    head_tree =  Articles_tree.objects.raw(SQL.format(0))[:60]
+    for line in head_tree:
+        if line.title1:
+            line.title_trans = transliterate(line.title) + '-' + transliterate(line.title1)
+        else:
+            line.title_trans = transliterate(line.title)
+    tree = Articles_tree.objects.raw(SQL.format(my_pointer[0]['id']))[:60]
+    for line in tree:
+        if line.title1:
+            line.title_trans = transliterate(line.title) + '-' + transliterate(line.title1)
+        else:
+            line.title_trans = transliterate(line.title)
     return render(request, 'site_main.html', {'head_tree' : head_tree,
                                                  'tree' : tree,
                                                  'id_arc_tree' : id_arc_tree,
@@ -75,7 +84,7 @@ def site_main_new(request, id_arc_tree = 1):
                                                  'pointer' : my_pointer, 
                                                  'head_line' : Article.title,
                                                  'art_content' : Article.art_data,
-                                                 'type' : Articles_tree_record.type,  })
+                                                 'type' : Articles_tree_record.type,})
 
 def site_tree_test(request):
     if request.user.is_authenticated or NON_NEED_LOGIN:

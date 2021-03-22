@@ -33,7 +33,6 @@ def transliterate(name):
               ':': '', ';': '', '<': '', '>': '', '\'': '', '"': '', '\\': '', '/': '', '№': '',
               '[': '', ']': '', '{': '', '}': '', 'ґ': '', 'ї': '', 'є': '', 'Ґ': 'g', 'Ї': 'i',
               'Є': 'e', '—': ''}
-
     # Циклически заменяем все буквы в строке
     for key in slovar:
         name = name.replace(key, slovar[key])
@@ -45,9 +44,8 @@ def pointer(my_child = 47, result = []):
     cursor.execute(my_SQL)
     for id, parent, title in cursor:
         pointer(my_child = parent, result = result)
-        result.append({'id':id, 'parent':parent, 'title':title})
-        #print title
-    
+        title_trans = transliterate(title)
+        result.append({'id':id, 'parent':parent, 'title':title, 'title_trans':title_trans})
     return result
 
 def tree_data(my_parent = 0, glubina = 10,  my_data = 0, result = [], level = 0):
@@ -161,4 +159,4 @@ def footer1(my_parent = 0, glubina = 2, i = 0, my_dimm = [], level = 0, result =
 #li = [['<li class="root-item"><a href="/o-kompanii/"><i class="fa"></i>{}</a>', '</li>'],['<li><a href="/o-kompanii/nasha-komanda/#administrativnyy-departament"><i class="fa"></i>{}</a>', '</li>'],['<li><a href="/o-kompanii/nasha-komanda/#administrativnyy-departament"><i class="fa"></i>','</li>']]   
 
 #print footer1(2, 2, ul = ul, li = li)
-print(transliterate("Тестовое слово"))
+#print(transliterate("Тестовое слово"))
