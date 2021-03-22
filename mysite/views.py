@@ -153,13 +153,13 @@ def logins(request):
             else:
                 # Return a 'disabled account' error message
                 error_message = "Ваш аккаунт отключен, Дозвиданья!"
-                return render(request, 'login_pto.html', { 'error_message' : error_message, }) 
+                return render(request, 'login.html', { 'error_message' : error_message, })
         else:
             # Return an 'invalid login' error message.
             error_message = "Не верный логин или пароль"   
-            return render(request, 'login_pto.html', { 'error_message' : error_message, })    
+            return render(request, 'login.html', { 'error_message' : error_message, })
     else:
-        return render(request, 'login_pto.html', { 'error_message' : error_message, })
+        return render(request, 'login.html', { 'error_message' : error_message, })
        
 def logouts(request):
     logout(request)
