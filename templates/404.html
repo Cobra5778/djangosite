@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> <!--  Здесь похоже только значки - можно будет убрать -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="{% static 'bootstrap-4.3.1/css/bootstrap.min.css' %}">
         <!-- Material Design Bootstrap -->
@@ -41,7 +41,7 @@
             <div class="content" id="content">
                 <div class="container wrapper-container">
                     <div class="row">
-                        <p>ОШИБКА 404. Страница не найдена.</p>
+                        <h1>ОШИБКА 404. Страница не найдена.</h1>
                     </div>
                 </div>
             </div>
@@ -53,9 +53,9 @@
 	         <div class="col-md-2 mb-md-0 mb-3">
 	            <h5 class="text-uppercase">Ссылки</h5>
 	            <ul class="list-unstyled">
-	               <li><a href="{% url 'site_main' head_tree.0.id head_tree.0.title_trans %}">О нашей разработке</a></li>
-	               <li><a href="{% url 'site_main' head_tree.1.id head_tree.1.title_trans %}">Наши услуги</a></li>
-	               <li><a href="{% url 'site_main' head_tree.15.id head_tree.15.title_trans %}">Контакты</a></li>
+	               <li><a href="{% url 'site_main' 1 'Glavnaya' %}">О нашей разработке</a></li>
+	               <li><a href="{% url 'site_main' 2 'Praktika' %}">Наши услуги</a></li>
+	               <li><a href="{% url 'site_main' 58 'Nasha_komanda' %}">Контакты</a></li>
 	            </ul>
 	         </div>
 	         <hr class="clearfix w-100 d-md-none pb-2">
