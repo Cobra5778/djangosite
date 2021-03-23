@@ -1,10 +1,93 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+{% load static %}
 <html lang="ru">
     <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
+        <link rel="shortcut icon" href="{% static 'Icons/SVG/favicon.svg' %}" type="image/svg+xml">
+        <link rel="icon" type="image/png" href="{% static 'Icons/1x/logo10.png' %}">
+        <link rel="mask-icon" href="{% static 'Icons/SVG/icon.svg' %}" color="#4285F4">
+        <link rel="icon" type="image/svg+xml" href="{% static 'Icons/SVG/favicon.svg' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> <!--  Здесь похоже только значки - можно будет убрать -->
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="{% static 'bootstrap-4.3.1/css/bootstrap.min.css' %}">
+        <!-- Material Design Bootstrap -->
+        <link rel="stylesheet" href="{% static 'MDB-Free_4.8.5/css/mdb.min.css' %}">
+        <!-- Your custom styles (optional) -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <meta name="yandex-verification" content="ac493dcd5af1d1e6" />
+        <title>Ошибка 404</title>
+        <!-- fancyBox3 CSS -->
+        <link href="{% static 'fancybox_3.5.7/jquery.fancybox.min.css' %}" rel="stylesheet">
     </head>
-    <body>
-        <p>ОШИБКА 404. Страница не найдена.</p>
-    </body>
+   <body>
+      <div class="window">
+<!-- site_head -->
+        <header class="header" id="site_head">
+            <div class="header__top">
+                 <div class="container">
+                    <div class="row">
+                       <div class="col-md-12">
+                           <a class="logo-header" href="/"><img title="лого2 на главной.png" role="img" src="{% static '/Icons/SVG/logo1.svg' %}"  width="350" alt="лого на главной" width="250" height="90"><br></a>
+                       </div>
+                    </div>
+                 </div>
+            </div>
+        </header>
+
+<!-- site_content -->
+            <div class="content" id="content">
+                <div class="container wrapper-container">
+                    <div class="row">
+                        <p>ОШИБКА 404. Страница не найдена.</p>
+                    </div>
+                </div>
+            </div>
+<!-- site_footer -->
+<footer class="page-footer font-small grey lighten-5 black-text pt-4">
+   <div class="container">
+	   <div class="container-fluid text-center lighten-3 text-md-left">
+	      <div class="row">
+	         <div class="col-md-2 mb-md-0 mb-3">
+	            <h5 class="text-uppercase">Ссылки</h5>
+	            <ul class="list-unstyled">
+	               <li><a href="{% url 'site_main' head_tree.0.id head_tree.0.title_trans %}">О нашей разработке</a></li>
+	               <li><a href="{% url 'site_main' head_tree.1.id head_tree.1.title_trans %}">Наши услуги</a></li>
+	               <li><a href="{% url 'site_main' head_tree.15.id head_tree.15.title_trans %}">Контакты</a></li>
+	            </ul>
+	         </div>
+	         <hr class="clearfix w-100 d-md-none pb-2">
+	         <div class="col-md-6 mb-md-0 mb-6">
+	            <!-- Links -->
+	            <h5 class="text-uppercase">Контакты</h5>
+	            <p>Корбун Иван Иванович</p>
+	            <p><a href="mailto:mail@prom-teo.ru">mail@kurssoft.ru</a></p>
+	            <p>309511, Белгородская область, г. Старый Оскол, мкр. Олимпийский 62<br></p>
+	            <p class="p-phone"><a href="tel:+79103280128">+7 910 328 0128</a></p>
+	         </div>
+	         <div class="col-md-4 mt-md-0 mt-4">
+	            <!-- Content -->
+	            <h5 class="text-uppercase">О компании</h5>
+	            <p>Мы с 2011г. строим радио сети на базе оборудования Mikrotik</p>
+	         </div>
+	      </div>
+	   </div>
+   </div>
+   <div class="footer-copyright text-center py-3 black-text">© 2020 Copyright
+      <a href="{% url 'site_main' %}">ПО Контроль и управление радио сетью</a>
+   </div>
+</footer>
+      </div>
+      <a href="#" id="back_to_top" style="display: none;"><span class="fa fa-chevron-up"></span></a>
+      <script src="https://yastatic.net/share2/share.js" async></script>
+      <script src="{% static 'MDB-Free_4.8.5/js/jquery-3.4.1.min.js' %}"></script>
+      <script src="{% static 'MDB-Free_4.8.5/js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'MDB-Free_4.8.5/js/mdb.min.js' %}"></script>
+      <script src="{% static 'MDB-Free_4.8.5/js/popper.min.js' %}"></script>
+      <!-- fancyBox -->
+      <script src="{% static 'fancybox_3.5.7/jquery.fancybox.min.js' %}"></script>
+   </body>
 </html>
+
