@@ -11,8 +11,8 @@ from django.contrib.auth import authenticate, login, logout
 
 NON_NEED_LOGIN = True
 
-def yandex_63a3d0a896e29e17(request):
-    return render(request, 'yandex_63a3d0a896e29e17.html', {})
+def yandex_verification(request):
+    return render(request, 'yandex_verification.html', {})
 
 def site_wellcome(request, art_tree_id = 1):
     if request.user.is_authenticated or NON_NEED_LOGIN:
